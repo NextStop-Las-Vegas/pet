@@ -1,0 +1,6 @@
+framework module Pods_Pet_prjct {
+  umbrella header "Pods-Pet-prjct-umbrella.h"
+
+  export *
+  module * { export * }
+}
