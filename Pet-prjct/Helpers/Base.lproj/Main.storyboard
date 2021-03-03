@@ -38,9 +38,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZrN-Ik-Gnt"/>
-                    <connections>
-                        <segue destination="1F2-DA-8Zq" kind="show" identifier="pushSeg" id="cjV-gX-axs"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

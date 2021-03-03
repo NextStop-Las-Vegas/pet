@@ -17,13 +17,20 @@ class ViewController: UIViewController {
         backBtn.tintColor = .black
         navigationItem.backBarButtonItem = backBtn
         
-        guard (storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeViewController) != nil else{return}
-        Auth.auth().addIDTokenDidChangeListener ({ [weak self] (auth, user) in
-            if user != nil {
-//                self?.navigationController?.pushViewController(homeViewController, animated: true)
-                self?.performSegue(withIdentifier: "pushSeg", sender: nil)
-            }
-        })
+        //        guard (storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeViewController) != nil else{return}
+        //        Auth.auth().addIDTokenDidChangeListener ({ [weak self] (auth, user) in
+        //            if user != nil {
+        //                self?.navigationController?.pushViewController(homeViewController, animated: true)
+        //                self?.performSegue(withIdentifier: "pushSeg", sender: nil)
+        //            }
+        //        })
+        
+                guard let homeViewController = storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeViewController else{return}
+                Auth.auth().addIDTokenDidChangeListener ({ [weak self] (auth, user) in
+                    if user != nil && self?.navigationController?.viewControllers.last != homeViewController {
+                        self?.navigationController?.pushViewController(homeViewController, animated: true)
+                    }
+                })
     }
     
     override func viewWillAppear(_ animated: Bool) {
