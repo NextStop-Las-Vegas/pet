@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4D2056F323F695CB5E8C4DF7 /* Pods_Pet_prjct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5703189AA8667BE802EC141D /* Pods_Pet_prjct.framework */; };
+		6C175F7825EF49B500B79CBB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C175F7725EF49B500B79CBB /* Utilities.swift */; };
+		6C175F7B25EF4BA800B79CBB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C175F7A25EF4BA800B79CBB /* HomeViewController.swift */; };
 		E9BE5F7625ECA86000899B25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE5F7525ECA86000899B25 /* AppDelegate.swift */; };
 		E9BE5F7825ECA86000899B25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE5F7725ECA86000899B25 /* SceneDelegate.swift */; };
 		E9BE5F7A25ECA86000899B25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE5F7925ECA86000899B25 /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		5703189AA8667BE802EC141D /* Pods_Pet_prjct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pet_prjct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C175F7725EF49B500B79CBB /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		6C175F7A25EF4BA800B79CBB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7FFAF3DBC76407E6EDE24047 /* Pods-Pet-prjct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pet-prjct.release.xcconfig"; path = "Target Support Files/Pods-Pet-prjct/Pods-Pet-prjct.release.xcconfig"; sourceTree = "<group>"; };
 		DAEF04E4766CC23231D84BFD /* Pods-Pet-prjct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pet-prjct.debug.xcconfig"; path = "Target Support Files/Pods-Pet-prjct/Pods-Pet-prjct.debug.xcconfig"; sourceTree = "<group>"; };
 		E9BE5F7225ECA86000899B25 /* Pet-prjct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pet-prjct.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,7 +37,7 @@
 		E9BE5F8125ECA86200899B25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9BE5F8325ECA86200899B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9BE5FA825ECC4DB00899B25 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
-		E9BE5FAB25ECF7B100899B25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E9BE5FAB25ECF7B100899B25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E9BE5FC125ED167000899B25 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E9BE5FC425ED167E00899B25 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,11 +94,9 @@
 			children = (
 				E9BE5FC825ED183C00899B25 /* View controllers */,
 				E9BE5FC725ED180E00899B25 /* Helpers */,
-				E9BE5F7B25ECA86000899B25 /* Main.storyboard */,
-				E9BE5F7E25ECA86200899B25 /* Assets.xcassets */,
-				E9BE5F8025ECA86200899B25 /* LaunchScreen.storyboard */,
-				E9BE5F8325ECA86200899B25 /* Info.plist */,
 				E9BE5FAB25ECF7B100899B25 /* GoogleService-Info.plist */,
+				E9BE5F8325ECA86200899B25 /* Info.plist */,
+				E9BE5F7E25ECA86200899B25 /* Assets.xcassets */,
 			);
 			path = "Pet-prjct";
 			sourceTree = "<group>";
@@ -102,9 +104,12 @@
 		E9BE5FC725ED180E00899B25 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E9BE5F7B25ECA86000899B25 /* Main.storyboard */,
 				E9BE5F7725ECA86000899B25 /* SceneDelegate.swift */,
 				E9BE5F7525ECA86000899B25 /* AppDelegate.swift */,
 				E9BE5FA825ECC4DB00899B25 /* Helpers.swift */,
+				6C175F7725EF49B500B79CBB /* Utilities.swift */,
+				E9BE5F8025ECA86200899B25 /* LaunchScreen.storyboard */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 				E9BE5FC425ED167E00899B25 /* SignViewController.swift */,
 				E9BE5FC125ED167000899B25 /* LoginViewController.swift */,
 				E9BE5F7925ECA86000899B25 /* ViewController.swift */,
+				6C175F7A25EF4BA800B79CBB /* HomeViewController.swift */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -236,6 +242,8 @@
 			files = (
 				E9BE5F7A25ECA86000899B25 /* ViewController.swift in Sources */,
 				E9BE5FC525ED167E00899B25 /* SignViewController.swift in Sources */,
+				6C175F7825EF49B500B79CBB /* Utilities.swift in Sources */,
+				6C175F7B25EF4BA800B79CBB /* HomeViewController.swift in Sources */,
 				E9BE5FA925ECC4DB00899B25 /* Helpers.swift in Sources */,
 				E9BE5F7625ECA86000899B25 /* AppDelegate.swift in Sources */,
 				E9BE5FC225ED167000899B25 /* LoginViewController.swift in Sources */,

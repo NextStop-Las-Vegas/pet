@@ -8,5 +8,8 @@ target 'Pet-prjct' do
   # Pods for Pet-prjct
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
+pod 'Firebase/Core'
+pod 'Firebase/Firestore'
+pod 'Firebase/Crashlytics'
 
 end

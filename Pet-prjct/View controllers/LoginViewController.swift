@@ -12,6 +12,7 @@ class LoginViewController: Helpers {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var welcomeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +28,13 @@ class LoginViewController: Helpers {
             
             if error != nil {
                 // Couldn't sign in
-//                self.errorLabel.text = error!.localizedDescription
-//                self.errorLabel.alpha = 1
+                //self.welcomeLabel.text = error!.localizedDescription
+                self.welcomeLabel.alpha = 0
                 print("error")
             }
             else {
-                
+                self.welcomeLabel.alpha = 1
+                print("complete")
 //                let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as! HomeViewController
 //                self.navigationController?.pushViewController(homeViewController, animated: true)
                 
